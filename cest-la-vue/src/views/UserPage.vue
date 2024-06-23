@@ -1,7 +1,12 @@
 <script setup>
-import UserCard from "./UserCard.vue";
+import UserCard from "@/components/UserCard.vue";
 import { defineProps } from "vue";
-import { userList } from "../composables/useUserStore";
+import { userList } from "@/composables/useUserStore";
+import { useRoute } from "vue-router";
+
+const route = useRoute;
+
+console.log(route.params.id);
 
 defineProps({
   title: {
